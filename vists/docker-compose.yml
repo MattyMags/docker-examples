@@ -1,0 +1,14 @@
+version: '3'
+
+# Tell the file what to do.
+services: 
+# Build redis server.
+  redis-server:
+    image: 'redis'
+# Build Node App
+  node-app:
+# Build from the current directory docker file.
+    build: .
+# Set up an array of ports.
+    ports:
+      - "4001:8081"
